@@ -50,7 +50,7 @@ var init = function (window) {
         */
         function update() {
             // TODO 4 : Update the circle's position //
-           for(var i = 0; i < circles; i++){
+           for(var i = 0; i < circles.length ; i++){
             var eachCircle= circles[i]
          physikz.updatePosition(eachCircle);
         

@@ -37,12 +37,10 @@ var level01 = function (window) {
             var obstacleImage = draw.bitmap("img/pixelHeart.png");
             obstacleImage.x = -x;
             obstacleImage.y = -y;
-            obstacleImage.scaleX = 25;
-            obstacleImage.scaleY = 25;
             heartHitZone.addChild(obstacleImage);
         }
-        return createHeartAttack(200, 200)
-//edit the size of the pixel heart png to match the sawblade png
+        return createHeartAttack(200, 200);
+
         // DO NOT EDIT CODE BELOW HERE
     }
 };

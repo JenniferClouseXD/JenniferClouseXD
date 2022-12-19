@@ -27,20 +27,27 @@ var level01 = function (window) {
 
         // TODO 6 and on go here
         // BEGIN EDITING YOUR CODE HERE
-        function createHeartAttack(x, y) {
-            var hitZoneSize = 25;
-            var damageFromObstacle = 10;
-            var heartHitZone = game.createObstacle(hitZoneSize, damageFromObstacle);
-            heartHitZone.x = x;
-            heartHitZone.y = y;
-            game.addGameItem(heartHitZone);
-            var obstacleImage = draw.bitmap("img/pixelHeart.png");
-            obstacleImage.x = -x;
-            obstacleImage.y = -y;
-            heartHitZone.addChild(obstacleImage);
-        }
-        return createHeartAttack(200, 200);
+        var enemy = game.createGameItem("enemy", 25);
+        var redSquare = draw.rect(50, 50, "red");
+        redSquare.x = -25;
+        redSquare.y = -25;
+        enemy.addChild(redSquare); 
+        enemy.x = 750;
+        enemy.y = groundY - 50;
+        game.addGameItem(enemy);
 
+        // function createHeartAttack(x, y) {
+        //     var hitZoneSize = 25;
+        //     var damageFromObstacle = 10;
+        //     var heartHitZone = game.createObstacle(hitZoneSize, damageFromObstacle);
+        //     heartHitZone.x = x;
+        //     heartHitZone.y = y;
+        //     game.addGameItem(heartHitZone);
+        //     var obstacleImage = draw.bitmap("img/pixelHeart.png");
+        //     obstacleImage.x = -x;
+        //     obstacleImage.y = -y;
+        //     heartHitZone.addChild(obstacleImage);
+        // }
 
         // DO NOT EDIT CODE BELOW HERE
     }
